@@ -119,9 +119,8 @@ gltfLoader.load(
 
         astronaut = gltf.scene
 
-        const radius = 1.3;
-        const initialY = (sizes.height / 2) - 1.9; // Adjust as needed
-        astronaut.position.set(1.9, initialY, 0);
+        const radius = 1.5;
+        astronaut.position.set(2.3, -2, -2); 
 
         astronaut.rotation.x = Math.PI * 0.2
         astronaut.rotation.z = Math.PI * 0.15
@@ -129,6 +128,8 @@ gltfLoader.load(
         astronaut.scale.set(radius, radius, radius)
 
         scene.add(astronaut)
+
+        console.log("Astronaut added to scene:", astronaut);
     },
     (progress) => {
         console.log(progress);
@@ -166,11 +167,11 @@ let currentSection = 0
 
 const transformAstronaut = [{
         rotationZ: 0.45,
-        positionX: 1.5
+        positionX: 2.3
     },
     {
         rotationZ: -0.45,
-        positionX: -1.5
+        positionX: -2.3
     },
     {
         rotationZ: 0.0314,
@@ -253,7 +254,7 @@ const tick = () => {
     lastElapsedTime = elapsedTime
 
     if (!!astronaut) {
-        astronaut.position.y = Math.sin(elapsedTime * .5) * .1 - 0.1
+        astronaut.position.y = Math.sin(elapsedTime * .5) * 1.5 - 0.1
         sphereShadow.material.opacity = (1 - Math.abs(astronaut.position.y)) * 0.3
     }
 
