@@ -31,7 +31,7 @@ body.loaded {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 50px;
     z-index: 100; 
     box-sizing: border-box;
 }
@@ -54,7 +54,7 @@ body.loaded {
 
 .navbar .nav-links a {
     color: white;
-    margin-left: 20px;
+    margin-left: 60px;
     text-decoration: none;
     font-size: 18px;
 }
@@ -79,7 +79,7 @@ section {
     position: relative;
     box-sizing: border-box;
     overflow-x: hidden;
-    color: aliceblue;
+    color: #c0c0c0;
 }
 
 
@@ -129,6 +129,22 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 70px;
+    line-height: 100px;
+    font-weight: 500;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.three h2{
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 90px;
     line-height: 100px;
     font-weight: 700;
@@ -140,27 +156,38 @@ h1 {
     justify-content: center;
 }
 
-#waitlistBtn {
-    background-color: #001f3f !important; /* Blue */
-    color: #fff !important; /* White text */
-    border: none !important;
-    margin-top: 20px !important;
-    padding: 12px 24px !important; /* Padding around text */
-    font-size: 18px !important; /* Font size */
-    font-weight: bold !important; /* Bold text */
-    border-radius: 6px !important; /* Rounded corners */
-    cursor: pointer !important; /* Show hand cursor on hover */
-    transition: background-color 0.3s, color 0.3s !important; /* Smooth transition on hover */
+.hero button {
+    background-color: #001f3f; 
+    color: #fff; 
+    border: none;
+    margin-top: 20px;
+    padding: 12px 24px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    border-radius: 6px;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+    position: relative; 
+    z-index: 1;
+}
+
+.tminus {
+    color: aliceblue;
 }
 
 #waitlistBtn:hover {
     background-color: aliceblue;
+    color: black;
+    cursor: pointer;
 }
 
 #waitlistBtn:focus {
-    outline: none !important; /* Remove default focus outline */
+    outline: none !important; 
 }
 
+span {
+    color: aliceblue;
+}
 h2 {
     font-size: 60px;
     font-weight: 600;
@@ -180,12 +207,14 @@ h3 {
 }
 
 p {
-    font-size: 16px;
+    color: aliceblue;
+    font-size: 18px;
     line-height: 26px;
-    font-weight: 300;
+    font-weight: 400;
     display: block;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .loading-bar {

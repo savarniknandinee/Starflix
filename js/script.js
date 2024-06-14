@@ -183,6 +183,37 @@ const transformAstronaut = [{
     },
 ]
 
+let mouseX = 0;
+let mouseY = 0;
+
+// Function to handle mouse movement
+function handleMouseMove(event) {
+    // Normalize mouse position to range [-1, 1]
+    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+}
+
+// Add event listener for mouse movement
+document.addEventListener('mousemove', handleMouseMove);
+
+// Function to update 3D model position based on mouse movement
+/*function updateModelPosition() {
+    if (!!astronaut) {
+        // Calculate new position based on mouse position
+        const newPositionX = mouseX * 2;
+        const newPositionY = mouseY * 2;
+
+        // Update model position
+        gsap.to(astronaut.position, {
+            duration: 0.5,
+            x: newPositionX,
+            y: newPositionY,
+            ease: 'power2.out'
+        });
+    }
+}*/
+
+
 window.addEventListener('scroll', () => {
 
     scrollY = window.scrollY
@@ -258,6 +289,7 @@ const tick = () => {
         sphereShadow.material.opacity = (1 - Math.abs(astronaut.position.y)) * 0.3
     }
 
+    //updateModelPosition();
     // Render
     renderer.render(scene, camera)
 
