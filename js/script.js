@@ -113,7 +113,7 @@ scene.add(overlay)
 let astronaut = null
 
 gltfLoader.load(
-    './assets/astronaut/scene.gltf',
+    '/assets/astronaut/scene.gltf',
     (gltf) => {
         console.log(gltf);
 
